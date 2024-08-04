@@ -109,7 +109,7 @@ const GenerateModules = () => {
             <div className="relative w-[90vw] h-[80vh]">
                 <div className="absolute z-0 w-full left-3 top-3 h-full border-[6px] bg-black border-black rounded-sm" />
                 <div className="flex relative z-10 w-full h-full border-[6px] bg-[#fbf9f5] border-black rounded-sm">
-                    <div className="w-[30%] px-6 py-6 border-r-4 border-black font-outfit">
+                    <div className="w-[30%] border-r-4 border-black font-outfit overflow-y-auto px-6 py-6 custom-scrollbar">
                         <PokemonForm onSubmit={handleFormSubmit} />
                     </div>
                     <div className="flex flex-col w-[80%] h-full">

@@ -215,12 +215,12 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ onSubmit }) => {
                     )}
                 />
 
-                <div className="flex space-x-4">
+                <div className="flex max-2xl:flex-col max-2xl:space-y-8 2xl:space-x-4">
                     <FormField
                         control={form.control}
                         name="holdable"
                         render={({ field }) => (
-                            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                            <FormItem className="flex flex-row  items-start space-x-3 space-y-0 rounded-md border p-4">
                                 <FormControl>
                                     <Checkbox
                                         checked={field.value}
@@ -332,7 +332,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ onSubmit }) => {
                     )}
                 />
 
-                <Button type="submit" className='w-[30%]'>Generate</Button>
+                <Button type="submit" className=''>Generate</Button>
             </form>
         </Form>
     );
