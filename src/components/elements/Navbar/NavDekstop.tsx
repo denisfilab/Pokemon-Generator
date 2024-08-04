@@ -6,7 +6,7 @@ const NavDesktop = () => {
 
     return (
         <nav
-            className={`sm:flex hidden z-[10000] w-screen fixed bg-navbar top-0 h-24 p-4 justify-between items-center transition-transform duration-700 px-[7.7vw]
+            className={`flex z-[10000] w-screen fixed bg-navbar top-0 h-24 p-4 justify-between items-center transition-transform duration-700 px-[7.7vw]
                 }`}
         >
             <div className="flex justify-between items-center w-full">
@@ -21,7 +21,7 @@ const NavDesktop = () => {
                         /></Link>
 
                 </div>
-                <Link href='/gallery' className='font-outfit font-bold text-white text-[1.5rem] mr-[20%] text-outline drop-shadow-[16px_16px_4px_rgba(0.2,0.2,0.2,0.2)]'>Gallery</Link>
+                <Link href='/gallery' className='font-outfit font-bold text-white text-[1.5rem] sm:mr-[20%] text-outline drop-shadow-[16px_16px_4px_rgba(0.2,0.2,0.2,0.2)]'>Gallery</Link>
             </div>
 
 

@@ -108,3 +108,21 @@
 .bg-button-gradient {
   background: linear-gradient(180deg, #ff5500 13.19%, #ff1ccd 63.09%);
 }
+.card-slider {
+  left: calc(50% - 10.417vw);
+  top: '20px';
+}
+
+@media (max-width: 1024px) {
+  .card-slider {
+    left: calc(50% - 8.5rem);
+    top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-slider {
+    left: calc(50% - 18.5vw);
+    top: 20px;
+  }
+}

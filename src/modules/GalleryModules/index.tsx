@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import CardGallery from "./elements/CardGallery";
 
-
-
 const GalleryModules = () => {
     const [cards, setCards] = useState<any[]>([]);
     const [status, setStatus] = useState<string | null>(null);
@@ -39,11 +37,13 @@ const GalleryModules = () => {
         <div className="w-full h-full flex flex-col justify-center items-center py-[6rem] px-[4rem]">
             <h1 className="font-outfit text-6xl font-bold text-gradient mb-[2rem]">Gallery</h1>
             {status && <p>{status}</p>}
-            <div className="grid grid-cols-3 gap-8 gap-y-[15vw] w-full mt-[6vw]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mt-[3vw]">
+
                 {cards.map((card, index) => (
-                    <div key={index} className="w-full h-full">
+                    <div key={index} className="aspect-[248.5/348.5] w-full h-full">
                         <CardGallery
                             imageUrl={`https://ezvoyqyobltsardvbeox.supabase.co/storage/v1/object/public/card/generated_cards/${(card.name).toLowerCase()}`}
+                            index={index}
                         />
                     </div>
                 ))}

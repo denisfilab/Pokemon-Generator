@@ -15,8 +15,9 @@ export async function GET(req: NextRequest) {
   }
 
   const token = authorization.split(' ')[1]
-
-  if (token !== process.env.NEXT_INTERNAL_API) {
+  console.log(token)
+  console.log(process.env.NEXT_PUBLIC_INTERNAL_API)
+  if (token !== process.env.NEXT_PUBLIC_INTERNAL_API) {
     return NextResponse.json({ message: 'Forbidden!' }, { status: 403 })
   }
 

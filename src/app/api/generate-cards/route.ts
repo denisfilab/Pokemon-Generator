@@ -42,9 +42,7 @@ export async function POST(req: NextRequest) {
 
   const token = authorization.split(' ')[1]
 
-  if (token !== process.env.NEXT_INTERNAL_API) {
-    console.error('Invalid token:', token)
-    console.error('Expected token:', process.env.NEXT_INTERNAL_API)
+  if (token !== process.env.PASSWORD) {
     return NextResponse.json({ message: 'Forbidden!' }, { status: 403 })
   }
 

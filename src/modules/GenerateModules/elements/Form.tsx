@@ -319,7 +319,7 @@ const PokemonForm: React.FC<PokemonFormProps> = ({ onSubmit }) => {
                                             <Info className="w-4 h-4 ml-2" />
                                         </TooltipTrigger>
                                         <TooltipContent>
-                                            <p>Contact me for the password at danisrahman3105@gmail.com</p>
+                                            <p>Contact me for the password at danisrahman3105@gmail.com , I have limited api credit</p>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>

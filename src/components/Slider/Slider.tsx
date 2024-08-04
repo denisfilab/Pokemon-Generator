@@ -57,17 +57,15 @@ const Slider: React.FC = () => {
     };
 
 
-
     return (
-        <div className="relative w-[35vw] h-[35vw] flex justify-center items-center">
+        <div className="relative w-[35vw] h-[35vw] max-lg:w-[40rem] max-lg:h-[24.8rem] flex justify-center items-center max-md:w-[90vw] max-md:h-[55.7vw]">
             <div className="slider relative w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
-                    <div key={index} className="item absolute w-[20.8vw] transition-all duration-500" style={{ left: 'calc(50% - 10.417vw)', top: '20px' }}>
-                        <div className='relative w-[20.8vw]'>
+                    <div key={index} className="item absolute w-[20.8vw] max-lg:w-[17rem] max-md:w-[38vw] transition-all duration-500 card-slider">
+                        <div className='relative w-[20.8vw] max-lg:w-[17rem] max-md:w-[38vw] '>
                             <Image src={slide.imageUrl} alt={slide.alt} width={0} height={0} className="rounded-lg shadow-lg " layout='responsive' loading="lazy"
                             />
                         </div>
-
                     </div>
                 ))}
             </div>
