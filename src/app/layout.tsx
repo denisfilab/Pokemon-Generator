@@ -5,6 +5,8 @@ import NavDesktop from "@/components/elements/Navbar/NavDekstop";
 import localFont from 'next/font/local';
 import { usePathname } from 'next/navigation';
 import Head from 'next/head';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const fontspringDemoGreycliff = localFont({
   src: [
@@ -67,6 +69,7 @@ export default function RootLayout({
         <NavDesktop />
         <main className={`w-full gradient-border ${isGalleryPage ? 'h-fit min-h-screen' : 'h-screen'}`}>
           {children}
+          <SpeedInsights />
         </main>
       </body>
     </html>
