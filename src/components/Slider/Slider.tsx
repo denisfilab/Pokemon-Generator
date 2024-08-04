@@ -6,10 +6,7 @@ interface SlideData {
     imageUrl: string;
     alt: string;
 }
-// images/1_warstone.png'
-// images/1_voltimur.png'
-// images/1_psikala.png
-// images/01_nijiar.png
+
 const slides: SlideData[] = [
     { imageUrl: "/images/1_warstone.png", alt: "Image 1" },
     { imageUrl: "/images/1_voltimur.png", alt: "Image 2" },
