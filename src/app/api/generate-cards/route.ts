@@ -97,8 +97,10 @@ export async function POST(req: NextRequest) {
           `data: ${JSON.stringify({ message: 'Rendering cards...' })}\n\n`
         )
         await sendCardsToExternalEndpoint(cards)
-
+        console.log('Cards:', cards)
         await sendToSupabase(cards)
+        console.log('Cards sent to Supabase')
+        console.log('Cards:', cards)
 
         controller.enqueue(
           `data: ${JSON.stringify({
