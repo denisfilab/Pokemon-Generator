@@ -452,7 +452,7 @@ async function generateAbilityAndName(description: string, element: Element) {
   return abilityJson
 }
 
-function generatePokemonStats(evolvement: number, Element: string) {
+async function generatePokemonStats(evolvement: number, Element: string) {
   // Validate input
   if (evolvement < 0 || evolvement > 2) {
     throw new Error('Evolvement must be between 0 and 2')
@@ -505,7 +505,7 @@ async function generateAbility(
   }
 
   let is_mixed_element = ability.elements
-  let statistics = generatePokemonStats(evolvement, is_mixed_element)
+  let statistics = await generatePokemonStats(evolvement, is_mixed_element)
   let combinedAbility = {
     ...ability,
     ...statistics,
