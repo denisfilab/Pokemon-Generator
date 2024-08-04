@@ -209,7 +209,7 @@ async function sendToSupabase(cards: Record<string, Card>) {
 }
 
 async function sendCardsToExternalEndpoint(cards: Record<string, Card>) {
-  const token = process.env.NEXT_INTERNAL_API
+  const token = process.env.NEXT_PUBLIC_INTERNAL_API
   if (!token) {
     throw new Error('token is not defined')
   }
