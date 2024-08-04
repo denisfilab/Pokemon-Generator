@@ -290,7 +290,7 @@ function getRandomFeatures(accessoriesFeaturesBoolean: boolean[]) {
 
 function getSeriesAdjectivesSet(evolvement: number) {
   if (evolvement === 0) {
-    return ['chibi cute', 'chibi young']
+    return ['engaging small', 'engaging young']
   }
   if (evolvement === 1) {
     return ['young', 'middle', 'dynamic']
