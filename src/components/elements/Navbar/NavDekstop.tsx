@@ -11,12 +11,15 @@ const NavDesktop = () => {
         >
             <div className="flex justify-between items-center w-full">
                 <div className="relative">
-                    <Image
-                        src='/images/Pokemon.svg'
-                        alt='logo'
-                        width={0}
-                        height={0}
-                        layout='responsive' />
+                    <Link href='/'>
+                        <Image
+                            src='/images/Pokemon.svg'
+                            alt='logo'
+                            width={0}
+                            height={0}
+                            layout='responsive'
+                        /></Link>
+
                 </div>
                 <Link href='/gallery' className='font-outfit font-bold text-white text-[1.5rem] mr-[20%] text-outline drop-shadow-[16px_16px_4px_rgba(0.2,0.2,0.2,0.2)]'>Gallery</Link>
             </div>

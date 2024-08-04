@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="flex h-full flex-col items-center px-[7.7vw]">
-      <div className="w-full h-full flex flex-row items-center">
-        <div className="flex flex-col">
-          <h1 className="text-7xl font-bold font-outfit text-gradient">
+    <section className="flex h-full flex-col items-center px-[7.7vw] pt-[6rem]">
+      <div className="w-full h-full flex flex-row  max-lg:flex-col-reverse items-center justify-between">
+        <div className="flex flex-col ">
+          <h1 className="text-[3.75vw] max-xl:text-[4.5vw] max-:text-[5vw] leading-tight font-bold font-outfit text-gradient">
             Generate Your Own<br></br> Pokémon Card
             <br></br>with AI
           </h1>
-          <p className="text-2xl font-fontspringDemoGreycliff text-black w-[50%] mt-[2vw]">Hey there, Pokémon fans and creative minds<span className="font-outfit">!</span> Ready to shake up the Pokémon world? We<span className="font-outfit">'</span>ve got something awesome for you, a super cool AI tool that lets you dream up your very own Pokémon cards<span className="font-outfit">!</span></p>
-          <Link href="/generate" className="bg-button-gradient w-fit text-outfit text-white font-bold mt-[2vw] px-[1.5vw] py-[1vw] text-4xl rounded-full">Create Your Own</Link>"
+          <p className="text-[1.25vw] max-xl:text-[1.4vw]  w-[35.25vw] font-fontspringDemoGreycliff text-black mt-[2vw]">Hey there, Pokémon fans and creative minds<span className="font-outfit">!</span> Ready to shake up the Pokémon world? We<span className="font-outfit">'</span>ve got something awesome for you, a super cool AI tool that lets you dream up your very own Pokémon cards<span className="font-outfit">!</span></p>
+          <Link href="/generate" className="bg-button-gradient w-fit text-outfit text-white font-bold mt-[2vw] px-[1.5vw] py-[0.6vw] text-[1.45vw] rounded-full">Create Your Own</Link>"
         </div>
         <div className="">
           <Slider />
@@ -23,5 +23,4 @@ export default function Home() {
   );
 }
 
-/* Font */
 

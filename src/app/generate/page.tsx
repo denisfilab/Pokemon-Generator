@@ -1,9 +1,8 @@
+import GenerateModules from "@/modules/GenerateModules";
 
 const GeneratePage = () => {
     return (
-        <div>
-
-        </div>
+        <GenerateModules />
     )
 }
 

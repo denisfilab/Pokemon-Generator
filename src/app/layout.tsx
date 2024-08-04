@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+'use client';
+
 import "./globals.css";
 import NavDesktop from "@/components/elements/Navbar/NavDekstop";
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
+import { usePathname } from 'next/navigation';
+import Head from 'next/head';
 
 const fontspringDemoGreycliff = localFont({
   src: [
@@ -43,28 +45,30 @@ const pokemonSolid = localFont({
       weight: 'normal',
       style: 'normal',
     }
-  ], variable: '--font-pokemon-solid'
+  ],
+  variable: '--font-pokemon-solid'
 });
-
-export const metadata: Metadata = {
-  title: "Pokemon Card Generator",
-  description: "Generate your own Pokemon cards",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isGalleryPage = pathname === '/gallery';
+
   return (
     <html lang="en">
+      <Head>
+        <title>Pokemon Card Generator</title>
+        <meta name="description" content="Generate your own Pokemon cards" />
+      </Head>
       <body className={`${pokemonSolid.variable} ${outfit.variable} ${fontspringDemoGreycliff.variable} w-screen max-w-full bg-[#E4FDFF] flex flex-col`}>
         <NavDesktop />
-        <main className="w-full gradient-border h-screen">
+        <main className={`w-full gradient-border ${isGalleryPage ? 'h-fit min-h-screen' : 'h-screen'}`}>
           {children}
         </main>
       </body>
-
     </html>
   );
 }

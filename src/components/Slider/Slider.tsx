@@ -19,6 +19,9 @@ const slides: SlideData[] = [
 
 const Slider: React.FC = () => {
     const [active, setActive] = useState(0);
+    const [offset, setOffset] = useState(0);
+
+
 
     useEffect(() => {
         loadShow();
@@ -56,13 +59,18 @@ const Slider: React.FC = () => {
         setActive((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
+
+
     return (
-        <div className="relative w-[600px] h-[600px] flex justify-center items-center">
+        <div className="relative w-[35vw] h-[35vw] flex justify-center items-center">
             <div className="slider relative w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
-                    <div key={index} className="item absolute w-[400px] h-[560px] transition-all duration-500" style={{ left: 'calc(50% - 200px)', top: '20px' }}>
-                        <Image src={slide.imageUrl} alt={slide.alt} width={400} height={560} className="rounded-lg shadow-lg " loading="lazy"
-                            priority={index === active} />
+                    <div key={index} className="item absolute w-[20.8vw] transition-all duration-500" style={{ left: 'calc(50% - 10.417vw)', top: '20px' }}>
+                        <div className='relative w-[20.8vw]'>
+                            <Image src={slide.imageUrl} alt={slide.alt} width={0} height={0} className="rounded-lg shadow-lg " layout='responsive' loading="lazy"
+                            />
+                        </div>
+
                     </div>
                 ))}
             </div>

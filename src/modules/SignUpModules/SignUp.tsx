@@ -42,7 +42,6 @@ const formSchema = z.object({
 
 const SignUp = () => {
 
-
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
