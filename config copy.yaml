@@ -1,0 +1,9 @@
+train: /kaggle/input/microslepp-fl3d/data/data/train
+val: /kaggle/input/microslepp-fl3d/data/data/holdout
+test: /kaggle/input/microslepp-fl3d/data/data/test
+
+# Number of classes
+nc: 3
+
+# Class names
+names: ['microsleep', 'alert', 'yawning']
