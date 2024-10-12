@@ -1,0 +1,12 @@
+# config.yaml
+
+# Paths to the dataset directories
+train: data/train
+val: data/holdout
+test: data/test
+
+# Number of classes
+nc: 3
+
+# Class names
+names: ['microsleep', 'alert', 'yawning']
